@@ -1,24 +1,36 @@
-<div class="col-sm-3">
-    <div class="card">
-        <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
-        <div class="avatar">
-          <%= image_tag("waikit.png") %>
-        </div>
-        <div class="content">
-            <p>
-              Wai Kit <br>
-              Wai Kit Sdn Bhd. <br>
-              13/hour <br>
-            </p>
-            <p><%= button_to "Contact", page4_path,
-:class => "btn btn-defalit", :method => :get %></p>
-        </div>
-    </div>
+<div class="row" style="
+    display: flex;">
+  <div class="col-sm-3" style="
+    margin: auto;
+    margin-top: 50px;">
+      <div class="card">
+          <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+          <div class="avatar">
+            <%= image_tag("waikit.png") %>
+          </div>
+          <div class="content">
+              <p>
+                Wai Kit <br>
+                Wai Kit Sdn Bhd. <br>
+                13/hour <br>
+              </p>
+              <p><%= button_to "Contact", page4_path,
+  :class => "btn btn-defalit", :method => :get %></p>
+          </div>
+      </div>
+  </div>
 </div>
-<div class='block'>
+<div class='block' style="clear:both">
 	<div class="calendar-container">
 		<div class='calender'>
-			<input id="date-picker" class="flatpickr flatpickr-input active date-picker form" name="chart[date]" type="text" placeholder="<%= Date.today %>" data-id="datetime" readonly="readonly">
+      <div id="datepickerlul" style="
+    display: flex;
+">
+			 <input id="date-picker" class="flatpickr flatpickr-input active date-picker form" name="chart[date]" type="text" placeholder="<%= Date.today %>" data-id="datetime" readonly="readonly" style="
+    position: static;
+    margin: auto;
+">
+      </div>
 			<br><br>
 			<div class="time-picker" style="display: none;">
 			    <ul class="list-inline intro-social-buttons">
@@ -36,8 +48,11 @@
 				    </li>
 				</ul>
 			</div>
-
-			<%= button_to "Book", "/#", id: "book-button", class: "btn btn-primary btn-lg", remote: true, style: "display: none" %>
+      <div style="display:flex;">
+        <div style="margin:auto">
+          <%= button_to "Book", "/#", id: "book-button", class: "btn btn-primary btn-lg", remote: true, style: "display: none" %>
+        </div>
+      </div>
 		</div>
 	</div>
 </div>

@@ -9,15 +9,19 @@
 	        <br>
 
 
-	        <select class='selection'>
-	          <option value="volvo">Development Stage</option>
-	          <option value="saab">Growth Stage</option>
-	          <option value="mercedes">Production Stage</option>
+	        <select class='selection' style='font-size: 150%'>
+		        <div>
+		          <option value="Development">	</option>
+		          <option value="Development">Development Stage</option>
+		          <option value="Growth">Growth Stage</option>
+		          <option value="Production">Production Stage</option>
+		     	</div>
 	        </select>
 
 			<br>
 			<br>
-	        <div class='haujie' style='display: none'>
+
+	        <div class='haujie' style='display: none; font-size: 18px;'>
 
 	            <div class='partnership agreement'>
 	            	<%= label_tag 'partnership agreement' %>
@@ -40,10 +44,11 @@
 	            </div>
 	            <br>
 	        </div>
-				<br>
-				<%= link_to page3_path do %>
-	            	<p><button type="button" class="btn btn-default">Submit</button></p>
-	            <% end %>
+
+			<%= link_to page3_path do %>
+            	<p><button type="button" class="btn btn-lg btn-primary">Submit</button></p>
+            <% end %>
+            
 	        </div>
 	    </div>
 	</div>

@@ -1,0 +1,57 @@
+
+<div class='check'>
+<!-- <input id="rock" name="rock" type="checkbox" value="rock music"> -->
+<div class="row">
+	<div class="col-sm-3">
+	    <div class="card">
+
+	        <div class="content">
+	        <br>
+
+
+	        <select class='selection'>
+	          <option value="volvo">Development Stage</option>
+	          <option value="saab">Growth Stage</option>
+	          <option value="mercedes">Production Stage</option>
+	        </select>
+
+			<br>
+			<br>
+	        <div class='haujie' style='display: none'>
+
+	            <div class='partnership agreement'>
+	            	<%= label_tag 'partnership agreement' %>
+	            	<%= check_box_tag 'partnership agreement' %>
+	            </div>
+
+	            <div class='partnership agreement'>
+	            	<%= label_tag 'partnership agreement' %>
+	            	<%= check_box_tag 'partnership agreement' %>
+	            </div>
+
+	            <div class='partnership agreement'>
+	            	<%= label_tag 'partnership agreement' %>
+	            	<%= check_box_tag 'partnership agreement' %>
+	            </div>
+
+	            <div class='partnership agreement'>
+	            	<%= label_tag 'partnership agreement' %>
+	            	<%= check_box_tag 'partnership agreement' %>
+	            </div>
+	            <br>
+	        </div>
+				<br>
+				<%= link_to page3_path do %>
+	            	<p><button type="button" class="btn btn-default">Submit</button></p>
+	            <% end %>
+	        </div>
+	    </div>
+	</div>
+</div>
+
+<script>
+	$('.selection').change(function(){
+		$('.haujie').show();
+	})
+</script>
+

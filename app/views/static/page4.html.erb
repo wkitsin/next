@@ -1,0 +1,44 @@
+<div class='block'>
+	<div class='calender'>
+	<input id="date-picker" class="flatpickr flatpickr-input active date-picker form" name="chart[date]" type="text" placeholder="<%= Date.today %>" data-id="datetime" readonly="readonly">
+	<br><br>
+	<div class="time-picker" style="display: none;">
+	    <ul class="list-inline intro-social-buttons">
+			<li>
+		        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">2.00pm - 3.00pm</span></div>
+		    </li>
+			<li>
+		        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">3.00pm - 4.00pm</span></div>
+		    </li>
+			<li>
+		        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">4.00pm - 5.00pm</span></div>
+		    </li>
+		    <li>
+		        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">5.00pm - 6.00pm</span></div>
+		    </li>
+		</ul>
+	</div>
+
+	<%= button_to "Book", "/#", id: "book-button", class: "btn btn-primary btn-lg", remote: true, style: "display: none" %>
+	</div>
+</div>
+<script>
+	flatpickr('#date-picker',{
+		minDate: "today",
+		"enable": [
+        function(date) {
+            return (date.getDay() === 5 || date.getDay() === 6);
+	        }
+	    ]
+	});
+
+	$('.time-btn').click(function(){
+		$('.time-btn').removeClass('btn-primary');
+		$(this).addClass('btn-primary');
+		$('#book-button').show();
+	})
+
+	$('#date-picker').change(function(){
+		$('.time-picker').show();
+	});
+</script>

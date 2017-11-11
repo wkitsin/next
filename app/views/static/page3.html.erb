@@ -1,5 +1,80 @@
-<br>
-<br>
-<br>
-<br>
-<%= link_to page4_path, "page 4" %>
+<div class="container">
+  <div class="row transparent">
+    <div class="col-md-12">
+        <div class="tuyin first"> 
+      <span class="title" >Documents</span>
+       <div class="plan-name">Here are your recommended documents</div>
+        <div class="text">
+        <p>Based on our evaluation of your requirements, we recommend these documents and lawyers. </p>
+        <ul>
+          <li>You need a dog.</li>
+          <li>You need a life.</li>
+          <li>You need a girlfriend.</li>
+        </ul>
+        </div>
+      <!-- <button type="button" class="btn btn-defalit">Read More <span class="glyphicon glyphicon-plus"></span> </button> -->
+      </div>
+    </div>
+  </div>
+  
+</div>
+<div class="container">
+  <div class="row">
+    <h1>
+        Select your lawyer of choice.
+        </h1>
+  </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                  <%= image_tag("portrait.jpg") %>
+                </div>
+                <div class="content">
+                    <p>
+                      Kevin <br>
+                      Kevin Sdn Bhd. <br>
+                      12/hour <br>
+                    </p>
+                    <p><%= button_to "Contact", page4_path,
+      :class => "btn btn-defalit", :method => :get %></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                  <%= image_tag("waikit.png") %>
+                </div>
+                <div class="content">
+                    <p>
+                      Wai Kit <br>
+                      Wai Kit Sdn Bhd. <br>
+                      13/hour <br>
+                    </p>
+                    <p><%= button_to "Contact", page4_path,
+      :class => "btn btn-defalit", :method => :get %></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                  <%= image_tag("haujie.png") %>
+                </div>
+                <div class="content">
+                    <p>
+                      Hau Jie <br>
+                      Hau Jie Sdn Bhd. <br>
+                      14/hour <br>
+                    </p>
+                    <p><%= button_to "Contact", page4_path,
+      :class => "btn btn-defalit", :method => :get %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

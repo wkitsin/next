@@ -7,57 +7,51 @@
 
 	        <div class="content">
 	        <br>
-	        	<p>Development Stage</p>
-	            <div class='partnership'>
-	            	<%= label_tag 'partnership agreement partnership agreement partnership agreement' %>
-	            	<%= check_box_tag 'partnership agreement' %>
-	            </div>
-	            <br>
-	            <div class='partnership agreement'>
-	            	<%= label_tag 'partnership agreement' %>
-	            	<%= check_box_tag 'partnership agreement' %>
-	            </div>
-	            <br>
-	            <div class='partnership agreement'>
-	            	<%= label_tag 'partnership agreement' %>
-	            	<%= check_box_tag 'partnership agreement' %>
-	            </div>
-	            <br>
-	            <p>Growth Stage</p>
-	            <div class='partnership agreement'>
-	            	<%= label_tag 'partnership agreement' %>
-	            	<%= check_box_tag 'partnership agreement' %>
-	            </div>
-	            <br>
-	            <div class='partnership agreement'>
-	            	<%= label_tag 'partnership agreement' %>
-	            	<%= check_box_tag 'partnership agreement' %>
-	            </div>
-	            <br>
+
+
+	        <select class='selection'>
+	          <option value="volvo">Development Stage</option>
+	          <option value="saab">Growth Stage</option>
+	          <option value="mercedes">Production Stage</option>
+	        </select>
+
+			<br>
+			<br>
+	        <div class='haujie' style='display: none'>
+
 	            <div class='partnership agreement'>
 	            	<%= label_tag 'partnership agreement' %>
 	            	<%= check_box_tag 'partnership agreement' %>
 	            </div>
 
-	            <p>Mature Stage</p>
-	            <div class='partnership agreement'>
-	            	<%= label_tag 'partnership agreement' %>
-	            	<%= check_box_tag 'partnership agreement' %>
-	            </div>
-	            <br>
-	            <div class='partnership agreement'>
-	            	<%= label_tag 'partnership agreement' %>
-	            	<%= check_box_tag 'partnership agreement' %>
-	            </div>
-	            <br>
 	            <div class='partnership agreement'>
 	            	<%= label_tag 'partnership agreement' %>
 	            	<%= check_box_tag 'partnership agreement' %>
 	            </div>
 
-	            <p><button type="button" class="btn btn-default">Submit</button></p>
+	            <div class='partnership agreement'>
+	            	<%= label_tag 'partnership agreement' %>
+	            	<%= check_box_tag 'partnership agreement' %>
+	            </div>
+
+	            <div class='partnership agreement'>
+	            	<%= label_tag 'partnership agreement' %>
+	            	<%= check_box_tag 'partnership agreement' %>
+	            </div>
+	            <br>
+	        </div>
+				<br>
+				<%= link_to page3_path do %>
+	            	<p><button type="button" class="btn btn-default">Submit</button></p>
+	            <% end %>
 	        </div>
 	    </div>
 	</div>
 </div>
+
+<script>
+	$('.selection').change(function(){
+		$('.haujie').show();
+	})
+</script>
 

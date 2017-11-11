@@ -14,8 +14,24 @@
  *= require_self
  */
 
+@import 'flatpickr-calendar';
+
+
+
 body {
-	padding-top: 50px;
+	padding-top: 51px;
+	background: url(<%= asset_data_uri 'img/intro-bg.jpg' %>) no-repeat center center;
+	background-size: cover;
+}
+
+
+.block {
+	height: 50%;
+	display: flex;
+}
+
+.calender {
+	margin: auto;
 }
 
 .check {

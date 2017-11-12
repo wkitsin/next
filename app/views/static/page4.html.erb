@@ -56,7 +56,7 @@
 <br><br>
 <div style="display:flex;">
 	<div class="col col-sm-1" style="margin:auto">
-	  <%= button_to "Book", "/#", id: "book-button", class: "btn btn-primary btn-lg", remote: true, style: "display: none" %>
+	  <%= button_to "Book", "/page4?#", id: "book-button", class: "btn btn-primary btn-lg", remote: true, style: "display: none" %>
 	</div>
 </div>
 <script>
@@ -81,4 +81,8 @@
 		$('.time-btn').removeClass('btn-primary');
 		$('.time-picker').show();
 	});
+
+	$('#book-button').click(function(e){
+		e.preventDefault();
+	})
 </script>

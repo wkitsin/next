@@ -15,5 +15,5 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery_ujs
-//= require flatpickr-calendar
+//= require bootstrap
 //= require_tree .

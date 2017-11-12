@@ -1,8 +1,5 @@
-<div class="row" style="
-    display: flex;">
-  <div class="col-sm-3" style="
-    margin: auto;
-    margin-top: 50px;">
+<div class="row" style=" display: flex;">
+  <div class="col-sm-3" style="margin: auto; margin-top: 50px;">
       <div class="card">
           <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
           <div class="avatar">
@@ -14,57 +11,63 @@
                 Wai Kit Sdn Bhd. <br>
                 13/hour <br>
               </p>
-              <p><%= button_to "Contact", page4_path,
-  :class => "btn btn-defalit", :method => :get %></p>
           </div>
       </div>
   </div>
 </div>
-<div class='block' style="clear:both">
-	<div class="calendar-container">
-		<div class='calender'>
-      <div id="datepickerlul" style="
-    display: flex;
-">
-			 <input id="date-picker" class="flatpickr flatpickr-input active date-picker form" name="chart[date]" type="text" placeholder="<%= Date.today %>" data-id="datetime" readonly="readonly" style="
-    position: static;
-    margin: auto;
-">
-      </div>
-			<br><br>
-			<div class="time-picker" style="display: none;">
-			    <ul class="list-inline intro-social-buttons">
-					<li>
-				        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">2.00pm - 3.00pm</span></div>
-				    </li>
-					<li>
-				        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">3.00pm - 4.00pm</span></div>
-				    </li>
-					<li>
-				        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">4.00pm - 5.00pm</span></div>
-				    </li>
-				    <li>
-				        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">5.00pm - 6.00pm</span></div>
-				    </li>
-				</ul>
-			</div>
-      <div style="display:flex;">
-        <div style="margin:auto">
-          <%= button_to "Book", "/#", id: "book-button", class: "btn btn-primary btn-lg", remote: true, style: "display: none" %>
-        </div>
-      </div>
-		</div>
+<br><br>
+<div class="row" style=" display: flex;">
+	<div class="date-picker col col-sm-8" style="margin: auto;">
+	    <ul class="list-inline intro-social-buttons">
+			<li>
+		        <div class="date-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">17 November 2017</span></div>
+		    </li>
+			<li>
+		        <div class="date-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">18 November 2017</span></div>
+		    </li>
+			<li>
+		        <div class="date-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">24 November 2017m</span></div>
+		    </li>
+		    <li>
+		        <div class="date-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">25 November 2017</span></div>
+		    </li>
+		</ul>
+	</div>
+</div>
+<br><br>
+<div class="row" style=" display: flex;">
+	<div class="col col-sm-7 time-picker" style="display: none; margin: auto;">
+	    <ul class="list-inline intro-social-buttons">
+			<li>
+		        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">2.00pm - 3.00pm</span></div>
+		    </li>
+			<li>
+		        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">3.00pm - 4.00pm</span></div>
+		    </li>
+			<li>
+		        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">4.00pm - 5.00pm</span></div>
+		    </li>
+		    <li>
+		        <div class="time-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">5.00pm - 6.00pm</span></div>
+		    </li>
+		</ul>
+	</div>
+</div>
+<br><br>
+<div style="display:flex;">
+	<div class="col col-sm-1" style="margin:auto">
+	  <%= button_to "Book", "/#", id: "book-button", class: "btn btn-primary btn-lg", remote: true, style: "display: none" %>
 	</div>
 </div>
 <script>
-	flatpickr('#date-picker',{
-		minDate: "today",
-		"enable": [
-        function(date) {
-            return (date.getDay() === 5 || date.getDay() === 6);
-	        }
-	    ]
-	});
+	// flatpickr('#date-picker',{
+	// 	minDate: "today",
+	// 	"enable": [
+ //        function(date) {
+ //            return (date.getDay() === 5 || date.getDay() === 6);
+	//         }
+	//     ]
+	// });
 
 	$('.time-btn').click(function(){
 		$('.time-btn').removeClass('btn-primary');
@@ -72,7 +75,10 @@
 		$('#book-button').show();
 	})
 
-	$('#date-picker').change(function(){
+	$('.date-btn').click(function(){
+		$('.date-btn').removeClass('btn-primary');
+		$(this).addClass('btn-primary');
+		$('.time-btn').removeClass('btn-primary');
 		$('.time-picker').show();
 	});
 </script>

@@ -1,62 +1,150 @@
 
-<div class='check'>
+<div class='check' style='overflow-x: hidden;'>
 <!-- <input id="rock" name="rock" type="checkbox" value="rock music"> -->
 <div class="row">
 	<div class="col-sm-3">
 	    <div class="card">
 
-	        <div class="content">
+	        <div class="content" style='max-height: 700px; overflow: scroll; min-height: 250px;'>
 	        <br>
+			
+			<div class='wrapper'>
+				<div class="wrap-select">
+					<div id="dd" class="wrapper-dropdown-3" style='font-size: 20px; width: 60%;'>
+						<span>Select Stage</span>
+						<ul class="dropdown">
+							<li><a href="#">Development Stage</a></li>
+							<li><a href="#">Growth Stage</a></li>
+							<li><a href="#">Production Stage</a></li>							
+						</ul>
+					</div>
+				</div>
 
+				<br>
+				<br>
 
-	        <select class='selection' style='font-size: 150%'>
-		        <div>
-		          <option value="Development">	</option>
-		          <option value="Development">Development Stage</option>
-		          <option value="Growth">Growth Stage</option>
-		          <option value="Production">Production Stage</option>
-		     	</div>
-	        </select>
+		        <div class='funkyradio'>
 
-			<br>
-			<br>
+		            <div class='partnership '>
+		            	<div class="funkyradio-primary">
+		            	    <input type="checkbox" name="checkbox2" id="checkbox2" />
+		            	    <label for="checkbox2">Compliance with securities laws in the issuance of shares</label>
+		            	</div>
+		            </div>
+					
+		            <div class='partnership '>
+		            	<div class="funkyradio-primary">
+		            	    <input type="checkbox" name="checkbox" id="checkbox3"  />
+		            	    <label for="checkbox3">Incorporation advice</label>
+		            	</div>	
+		            </div>
 
-	        <div class='haujie' style='display: none; font-size: 18px;'>
+		            <div class='partnership '>
+		            	<div class="funkyradio-primary">
+		            	    <input type="checkbox" name="checkbox" id="checkbox4"  />
+		            	    <label for="checkbox4">Intellectual property protection</label>
+		            	</div>	
+		            </div>
 
-	            <div class='partnership agreement'>
-	            	<%= label_tag 'partnership agreement' %>
-	            	<%= check_box_tag 'partnership agreement' %>
+		            <div class='partnership '>
+		            	<div class="funkyradio-primary">
+		            	    <input type="checkbox" name="checkbox" id="checkbox5"  />
+		            	    <label for="checkbox5">Potential Shareholder Diss</label>
+		            	</div>	
+		            </div>
+
+		            <div class='partnership '>
+		            	<div class="funkyradio-primary">
+		            	    <input type="checkbox" name="checkbox" id="checkbox6"  />
+		            	    <label for="checkbox6">Real estate matters</label>
+		            	</div>	
+		            </div>
+
+		            <div class='partnership '>
+		            	<div class="funkyradio-primary">
+		            	    <input type="checkbox" name="checkbox" id="checkbox7"  />
+		            	    <label for="checkbox7">Shareholding s - %, salaries, roles and responsibilities, time commitments, overall goal etc</label>
+		            	</div>	
+		            </div>
+
+		            <div class='partnership '>
+		            	<div class="funkyradio-primary">
+		            	    <input type="checkbox" name="checkbox" id="checkbox8"  />
+		            	    <label for="checkbox8">Standard Contracts for clients</label>
+		            	</div>	
+		            </div>
+
+		            <div class='partnership '>
+		            	<div class="funkyradio-primary">
+		            	    <input type="checkbox" name="checkbox" id="checkbox9"  />
+		            	    <label for="checkbox9">Tax issues</label>
+		            	</div>	
+		            </div>
+		           
+
+		            <div class='partnership '>
+		            	<div class="funkyradio-primary">
+		            	    <input type="checkbox" name="checkbox" id="checkbox13"  />
+		            	    <label for="checkbox13">How to lodge a police report</label>
+		            	</div>	
+		            </div>
+		            <br>
+		        
+
+					<%= link_to page3_path do %>
+		            	<p><button type="button" class="btn btn-lg btn-primary">Submit</button></p>
+		            <% end %>
 	            </div>
-
-	            <div class='partnership agreement'>
-	            	<%= label_tag 'partnership agreement' %>
-	            	<%= check_box_tag 'partnership agreement' %>
-	            </div>
-
-	            <div class='partnership agreement'>
-	            	<%= label_tag 'partnership agreement' %>
-	            	<%= check_box_tag 'partnership agreement' %>
-	            </div>
-
-	            <div class='partnership agreement'>
-	            	<%= label_tag 'partnership agreement' %>
-	            	<%= check_box_tag 'partnership agreement' %>
-	            </div>
-	            <br>
-	        </div>
-
-			<%= link_to page3_path do %>
-            	<p><button type="button" class="btn btn-lg btn-primary">Submit</button></p>
-            <% end %>
-            
+	            
+	        	</div>
 	        </div>
 	    </div>
 	</div>
 </div>
 
 <script>
-	$('.selection').change(function(){
-		$('.haujie').show();
+	$('.dropdown li').click(function(){
+		$('.funkyradio').show();
 	})
+
+	    		function DropDown(el) {
+					this.dd = el;
+					this.placeholder = this.dd.children('span');
+					this.opts = this.dd.find('.dropdown a');
+					this.val = '';
+					this.index = -1;
+					this.initEvents();
+				}
+				DropDown.prototype = {
+					initEvents : function() {
+						var obj = this;
+
+						obj.dd.on('click', function(event){
+							$(this).toggleClass('active');
+							return false;
+						});
+
+						obj.opts.on('click',function(){
+							var opt = $(this);
+							obj.val = opt.text();
+							obj.index = opt.index();
+							obj.placeholder.text(obj.val);
+						});
+					},
+					getValue : function() {
+						return this.val;
+					},
+					getIndex : function() {
+						return this.index;
+					}
+				}
+
+				$(function() {
+
+					var dd = new DropDown( $('#dd') );
+
+
+
+				});
 </script>
 

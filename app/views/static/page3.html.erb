@@ -5,12 +5,15 @@
       <span class="title" >Documents</span>
        <div class="plan-name" style="color: white">Here are your recommended documents</div>
         <div class="text">
-        <p style="color: white">Based on our evaluation of your requirements, we recommend these documents and lawyers. </p>
-        <ul>
-          <li>You need a dog.</li>
-          <li>You need a life.</li>
-          <li>You need a girlfriend.</li>
-        </ul>
+        <p style="color: white; font-size: 22px;">Based on our evaluation of your requirements, we recommend these documents and lawyers. </p>
+
+        <div class='agreement' style="color: white; font-size: 20px;">
+          <ul>
+            <li>Purchase Agreement.</li>
+            <li>Partnership Agreement.</li>
+            <li>Bill of Sale.</li>
+          </ul>
+        </div>
         </div>
       <!-- <button type="button" class="btn btn-defalit">Read More <span class="glyphicon glyphicon-plus"></span> </button> -->
       </div>
@@ -31,14 +34,16 @@
                 <div class="avatar">
                   <%= image_tag("portrait.jpg") %>
                 </div>
-                <div class="content">
+                <div class="lawyer_details">
                     <p>
                       Kevin <br>
                       Kevin Sdn Bhd. <br>
                       12/hour <br>
+                      <hr>
+                      Corporate Lawyer <br>
                     </p>
                     <p><%= button_to "Contact", page4_path,
-      :class => "btn btn-defalit", :method => :get %></p>
+      :class => "contact-btn btn btn-defalit", :method => :get %></p>
                 </div>
             </div>
         </div>
@@ -48,14 +53,16 @@
                 <div class="avatar">
                   <%= image_tag("waikit.png") %>
                 </div>
-                <div class="content">
-                    <p>
-                      Wai Kit <br>
-                      Wai Kit Sdn Bhd. <br>
-                      13/hour <br>
-                    </p>
+                <div class="lawyer_details">
+                <p>
+                  Wai Kit <br>
+                  Wai Kit Sdn Bhd. <br>
+                  13/hour <br>
+                  <hr>
+                  Corporate Lawyer <br>
+                </p>
                     <p><%= button_to "Contact", page4_path,
-      :class => "btn btn-defalit", :method => :get %></p>
+      :class => "contact-btn btn btn-defalit", :method => :get %></p>
                 </div>
             </div>
         </div>
@@ -65,14 +72,16 @@
                 <div class="avatar">
                   <%= image_tag("haujie.png") %>
                 </div>
-                <div class="content">
+                <div class="lawyer_details">
                     <p>
                       Hau Jie <br>
                       Hau Jie Sdn Bhd. <br>
                       14/hour <br>
+                      <hr>
+                      Corporate Lawyer <br>
                     </p>
                     <p><%= button_to "Contact", page4_path,
-      :class => "btn btn-defalit", :method => :get %></p>
+      :class => "contact-btn btn btn-defalit", :method => :get %></p>
                 </div>
             </div>
         </div>

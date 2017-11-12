@@ -11,9 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
-//= require rails-ujs
 //= require jquery
 //= require jquery_ujs
-//= require flatpickr-calendar
+//= require turbolinks
 //= require_tree .

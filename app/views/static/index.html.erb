@@ -1,188 +1,109 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="intro-message">
+                    <h1>Raw</h1>
+                    <h3>Affordable Lawyer Solutions</h3>
+                    <hr class="intro-divider">
+                    <div class="card" style="color: black; background-color: white;">
+                    	<div class="chat-card card">
+                    		<h3>Hi! Welcome to Raw.</h3>
+                    		<h3>Please identify yourself</h3>
+                    		<ul class="list-inline intro-social-buttons">
+								<li>
+							        <div class="identify-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Individual</span></div>
+							    </li>
+								<li>
+							        <div class="identify-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Startup</span></div>
+							    </li>
+								<li>
+							        <div class="identify-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Company</span></div>
+							    </li>
+							</ul>
+                    	</div>
+                    	<div id="second-card" class="chat-card card" style="display: none;">
+                    		<h3>Great!, what legal help do you need?</h3>
+                    	</div>
+                    	<div id="third-card" class="chat-card card" style="display: none;">
+                    		<h3>I need to know what kind of legal documents I need for my startup</h3>
+                    	</div>
+                    	<div id="fourth-card" class="chat-card card" style="display: none;">
+                    		<h3>Sure, what stage is your startup in?</h3>
+                    		<ul class="list-inline intro-social-buttons">
+								<li>
+							        <div class="stage-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Development</span></div>
+							    </li>
+								<li>
+							        <div class="stage-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Growth</span></div>
+							    </li>
+								<li>
+							        <div class="stage-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Production</span></div>
+							    </li>
+							    <li>
+							        <div class="stage-btn btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">I don't know</span></div>
+							    </li>
+							</ul>
+                    	</div>
+                    	<div id='last-card' class='funkyradio' style='display: none; font-size: 18px;'>
+				            <div class='partnership agreement' style='padding: 8px 8px 8px 8px'>
+				            	<div class="funkyradio-primary">
+				            	    <input type="checkbox" name="checkbox2" id="checkbox2" />
+				            	    <label for="checkbox2">Compliance with securities laws in the issuance of shares</label>
+				            	</div>
+				            </div>
+							
+				            <div class='partnership agreement' style='padding: 8px 8px 8px 8px'>
+				            	<div class="funkyradio-primary">
+				            	    <input type="checkbox" name="checkbox" id="checkbox3"  />
+				            	    <label for="checkbox3">Incorporation advice</label>
+				            	</div>	
+				            </div>
 
-<head>
+				            <div class='partnership agreement' style='padding: 8px 8px 8px 8px'>
+				            	<div class="funkyradio-primary">
+				            	    <input type="checkbox" name="checkbox" id="checkbox4"  />
+				            	    <label for="checkbox4">Intellectual property protection</label>
+				            	</div>	
+				            </div>
 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Custom Fonts -->
-    <!-- <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-
-</head>
-
-<body>
-
-    <!-- Header -->
-    <a name="about"></a>
-    <div class="intro-header">
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="intro-message">
-                        <h1>Raw</h1>
-                        <h3>Affordable Lawyer Solutions</h3>
-                        <hr class="intro-divider">
-                        <ul class="list-inline intro-social-buttons">
-                            <br>
-                            <h1>What are you?</h1>
-                            <br>
-                            <%= link_to page2_path, class: "btn btn-default btn-lg" do  %>
-	                            <li>
-	                                <i class="fa fa-twitter fa-fw"></i> <span class="network-name">Startup</span>
-	                            </li>
-                            <% end %>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">SME</span></a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Others</span></a>
-                            </li>
-                        </ul>
+				            <div class='partnership agreement' style='padding: 8px 8px 8px 8px'>
+				            	<div class="funkyradio-primary">
+				            	    <input type="checkbox" name="checkbox" id="checkbox5"  />
+				            	    <label for="checkbox5">Potential Shareholder Disagreements</label>
+				            	</div>	
+				            </div>
+            				<%= link_to page3_path do %>
+								<p><button type="button" class="btn btn-lg btn-primary">Submit</button></p>
+							<% end %>
+				        </div>
+				        <%= text_field_tag :text_field %>
                     </div>
                 </div>
             </div>
-
         </div>
-        <!-- /.container -->
-
     </div>
-    <!-- /.intro-header -->
+</div>
 
-    <!-- Page Content -->
+<script>
+	$('.identify-btn').click(function(){
+		$('.identify-btn').removeClass('btn-primary');
+		$(this).addClass('btn-primary');
+		$('#second-card').show();
+	})
 
-	<a  name="services"></a>
-    <div class="content-section-a">
+	$('#text_field').keypress(function(e) {
+	    if(e.which == 13) {
+	    	$('#text_field').val('');
+	        $('#third-card').show();
+	        $('#fourth-card').show();
+	    }
+	});
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                    <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <%= image_tag("img/ipad.png", class: "img-responsive") %>
-                </div>
-            </div>
+	$('.stage-btn').click(function(){
+		$('.stage-btn').removeClass('btn-primary');
+		$(this).addClass('btn-primary');
+		$('#last-card').show();
+	})
 
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <%= image_tag("img/dog.png", class: "img-responsive") %>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-b -->
-
-    <div class="content-section-a">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                    <p class="lead">This template features the 'Lato' font, part of the <a target="_blank" href="http://www.google.com/fonts">Google Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font Awesome</a>.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <%= image_tag("img/phones.png", class: "img-responsive") %>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-	<a  name="contact"></a>
-    <div class="banner">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2>Connect to Start Bootstrap:</h2>
-                </div>
-                <div class="col-lg-6">
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.banner -->
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#about">About</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#services">Services</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li>
-                            <a href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; NEXT 2017. All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <!-- <script src="js/jquery.js"></script> -->
-
-    <!-- Bootstrap Core JavaScript -->
-    <!-- <script src="js/bootstrap.min.js"></script> -->
-
-</body>
-
-</html>
+</script>
